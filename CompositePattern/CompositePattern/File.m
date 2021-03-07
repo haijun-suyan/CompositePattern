@@ -10,7 +10,7 @@
 
 @interface File ()
 
-@property (nonatomic, strong) NSMutableArray <File *> *childFiles;
+@property(nonatomic,strong)NSMutableArray <File *> *childFiles;
 
 @end
 
@@ -29,7 +29,7 @@
     [self.childFiles addObject:file];
 }
 
-+(instancetype)fileWithFileType:(EFile)fileType fileName:(NSString *)name {
++ (instancetype)fileWithFileType:(EFile)fileType fileName:(NSString *)name {
     File *file = [[[self class] alloc] init];
     file.fileType = fileType;
     file.name = name;

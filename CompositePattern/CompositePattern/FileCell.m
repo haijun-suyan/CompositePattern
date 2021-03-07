@@ -7,7 +7,6 @@
 //
 
 #import "FileCell.h"
-//#import "UIView+SetRect.h"
 #import "File.h"
 #import "FileViewController.h"
 

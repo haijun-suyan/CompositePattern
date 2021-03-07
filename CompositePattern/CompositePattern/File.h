@@ -8,18 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, EFile) {
+typedef NS_ENUM(NSUInteger,EFile) {
     kFile,
     kFolder
 };
 
 @interface File : NSObject
+@property(nonatomic,copy)NSString *name;
+@property(nonatomic,assign)EFile fileType;
 
-@property (nonatomic, strong) NSString *name;
-
-@property (nonatomic, assign) EFile fileType;
-
-@property (nonatomic, strong, readonly) NSMutableArray <File *> *childFiles;
+@property(nonatomic,strong,readonly)NSMutableArray <File *> *childFiles;
 
 - (void)addFile:(File *)file;
 
